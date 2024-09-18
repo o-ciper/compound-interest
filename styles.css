@@ -50,3 +50,21 @@ button {
   font-size: 1.2rem;
   margin-top: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    /* Styles for mobile view */
+  body {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .compound-interest-daily {
+    width: 95vw;
+  }
+  
+  form {
+    max-width: 95vw;
+    width: 100%;
+  }
+
+}
