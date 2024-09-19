@@ -14,11 +14,11 @@
     <form id="calculate-interest">
       <label for="principal">Anapara:</label>
         <!-- <input type="number" step="0.01" min="0" id="principal" placeholder="0.00"></input> -->
-      <input type="text" inputmode="decimal" pattern="^\d+([.,]\d{1,2})?$" id="principal" title="Lütfen virgülden sonra en fazla iki ondalıklı geçerli bir sayı giriniz." required></input>
+      <input type="text" inputmode="decimal" pattern="^\d+([.,]\d{1,4})?$" id="principal" title="Lütfen virgülden sonra en fazla dört ondalıklı geçerli bir sayı giriniz." required></input>
 
       <label for="rate">Oran (% günlük):</label>
         <!-- <input type="number" step="0.01" id="rate" name="rate" required> -->
-      <input type="text" inputmode="decimal" pattern="^\d+([.,]\d{1,4})?$" id="rate" name="rate" title="Lütfen virgülden sonra en fazla iki ondalıklı geçerli bir sayı giriniz." required></input>
+      <input type="text" inputmode="decimal" pattern="^\d+([.,]\d{1,4})?$" id="rate" name="rate" title="Lütfen virgülden sonra en fazla dört ondalıklı geçerli bir sayı giriniz." required></input>
 
       <label for="days">Gün sayısı:</label>
       <input type="number" id="days" name="days" required>

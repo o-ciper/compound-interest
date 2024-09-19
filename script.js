@@ -13,8 +13,8 @@ document.getElementById('calculate-interest').addEventListener('submit', functio
 	}
 	const interest = principal * Math.pow(rate + 1, days);
 	document.getElementById('result').innerHTML = `
-		<div class="amount-container"><div>Kâr: </div><div class="amount" id="total-profit">${(interest - principal).toFixed(2)}</div></div>
-		<div class="amount-container"><div>Bakiye:</div><div class="amount" id="total-amount">${interest.toFixed(2)}</div></div>
+		<div class="amount-container"><div>Kâr: </div><div class="amount" id="total-profit">${(interest - principal).toFixed(4)}</div></div>
+		<div class="amount-container"><div>Bakiye:</div><div class="amount" id="total-amount">${interest.toFixed(4)}</div></div>
 	`;
 })
 
@@ -44,7 +44,7 @@ principalInput.addEventListener('input', (event) => {
 	const decimalIndex = value.indexOf('.');
 	if (decimalIndex !== -1) {
 		const beforeDecimal = value.slice(0, decimalIndex);
-		const afterDecimal = value.slice(decimalIndex + 1, decimalIndex + 3 + 1);
+		const afterDecimal = value.slice(decimalIndex + 1, decimalIndex + 4 + 1);
 		value = beforeDecimal + '.' + afterDecimal;
 	}
 
@@ -57,11 +57,11 @@ principalInput.addEventListener('blur', (event) => {
 	let value = event.target.value.replace(',', '.'); // Handle comma as decimal point
 
 	// Convert to a float and format to 2 decimal places
-	value = parseFloat(value).toFixed(2);
+	value = parseFloat(value).toFixed(4);
 
 	// If input is invalid or empty, reset to "0.00"
 	if (isNaN(value)) {
-		value = '0.00';
+		value = '0.0000';
 	}
 
 	event.target.value = value;
@@ -98,7 +98,7 @@ rateInput.addEventListener('blur', (event) => {
 
 	// If input is invalid or empty, reset to "0.00"
 	if (isNaN(value)) {
-		value = '0.00';
+		value = '0.000';
 	}
 
 	event.target.value = value;
