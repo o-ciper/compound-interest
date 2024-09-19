@@ -9,5 +9,8 @@ document.getElementById('calculate-interest').addEventListener('submit', functio
 		return;
 	}
 	const interest = principal * Math.pow(rate + 1, days);
-	document.getElementById('result').textContent = `Total: $${interest.toFixed(2)}`;
-});
+	document.getElementById('result').innerHTML = `
+		<div class="amount-container"><div>Kâr: </div><div class="amount" id="total-profit">${(interest - principal).toFixed(2)}</div></div>
+		<div class="amount-container"><div>Bakiye:</div><div class="amount" id="total-amount">${interest.toFixed(2)}</div></div>
+	`;
+})

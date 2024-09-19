@@ -51,6 +51,19 @@ button {
   margin-top: 20px;
 }
 
+.amount-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.amount-container div {
+  padding: 0 8px 3px;
+}
+
+.amount {
+  font-weight: 600;
+}
+
 @media only screen and (max-width: 600px) {
     /* Styles for mobile view */
   body {
