@@ -10,6 +10,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #010409;
+  color: white;
 }
 
 .compound-interest-daily {
@@ -21,33 +23,70 @@ body {
 form {
   max-width: 30vw;
   min-width: 25vw;
-  border: 1px solid #ccc;
+  border: 1px solid #3d444d;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  background-color: #151b23;
+  border-radius: 6px;
+  /* background-color: #0d1117; */
 }
 
 label, input, button {
   margin-bottom: 10px;
+  color: #f0f6fc;
 }
 
 label {
   margin-top: 5px;
+  font-size: 1.7ch;
+  color: #9198a1;
 }
 
 input {
   height: 30px;
   padding: 8px;
   font-size: 1.05rem;
+  /* background-color: #3d444d; */
+  background-color: #151b23;
+  border-radius: 6px;
+  box-shadow: inset 0px 1px 0px 0px #0104093d;
+  border: 1px solid #3d444d;
+  color: #f0f6fc;
+  transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
+  transition-property: color, background-color, box-shadow, border-color;
+}
+
+input:focus {
+  border: 1px solid #1f6feb;
+  background: #1c1b23;
+  box-shadow: inset 0 0 0 1px transparent;
 }
 
 button {
-  height: 30px;
+  height: 35px;
   margin-top: 15px;
+  background-color: #212830;
+  box-shadow: 0.5px .5px 8px #1a1616;
+  border-radius: 6px;
+  font-size: 1.7ch;
+  outline: none;
+  border: 1px solid #3d444d;
+  cursor: pointer;
+  transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
+  transition-property: color, background-color, box-shadow, border-color;
+}
+
+button:hover {
+  background-color: #2d333d;
+}
+
+button:active {
+  background-color: #38517c29;
 }
 
 #result {
-  font-size: 1.2rem;
+  font-size: 1.8ch;
   margin-top: 20px;
 }
 
@@ -64,8 +103,8 @@ button {
   font-weight: 600;
 }
 
-@media only screen and (max-width: 600px) {
-    /* Styles for mobile view */
+/* Styles for mobile view */
+/* @media only screen and (max-width: 600px) {
   body {
     align-items: flex-start;
     padding: 10px;
@@ -80,4 +119,58 @@ button {
     width: 100%;
   }
 
+} */
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 768px) {
+  body {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .compound-interest-daily {
+    width: 95vw;
+  }
+  
+  form {
+    max-width: 95vw;
+    width: 100%;
+  }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+  body {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .compound-interest-daily {
+    width: 90vw;
+  }
+  
+  form {
+    max-width: 90vw;
+    width: 100%;
+  }
+}
+
+@media only screen
+and (min-device-width : 1024px)
+and (max-device-width : 1920px) {
+  body {
+    align-items: flex-center;
+    padding: 10px;
+  }
+
+  .compound-interest-daily {
+    width: 60vw;
+  }
+  
+  form {
+    max-width: 400px;
+    width: 100%;
+  }
 }
