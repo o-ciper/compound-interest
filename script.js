@@ -13,8 +13,18 @@ document.getElementById('calculate-interest').addEventListener('submit', functio
 	}
 	const interest = principal * Math.pow(rate + 1, days);
 	document.getElementById('result').innerHTML = `
-		<div class="amount-container"><div>Kâr: </div><div class="amount" id="total-profit">${(interest - principal).toFixed(4)}</div></div>
-		<div class="amount-container"><div>Bakiye:</div><div class="amount" id="total-amount">${interest.toFixed(4)}</div></div>
+		<div class="amount-container">
+			<div>Kâr: </div>
+			<div class="amount" id="total-profit">
+				${(interest - principal).toFixed(4)}
+			</div>
+		</div>
+		<div class="amount-container">
+			<div>Bakiye:</div>
+			<div class="amount" id="total-amount">
+				${interest.toFixed(4)}
+			</div>
+		</div>
 	`;
 })
 

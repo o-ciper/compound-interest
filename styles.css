@@ -148,11 +148,11 @@ and (max-device-width : 1024px) {
   }
 
   .compound-interest-daily {
-    width: 90vw;
+    width: 70vw;
   }
   
   form {
-    max-width: 90vw;
+    max-width: 70vw;
     width: 100%;
   }
 }
