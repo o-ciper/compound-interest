@@ -18,18 +18,6 @@ document.getElementById('calculate-interest').addEventListener('submit', functio
 	`;
 })
 
-function formatCurrency(input) {
-	console.log(input);
-	// Remove any non-numeric characters except for decimal points
-	input.value = input.value.replace(/[^\d.]/g, '');
-
-	// Ensure only one decimal point
-	input.value = input.value.replace(/\.(?=.*\.)/g, '');
-
-	// Format the value with commas and two decimal places
-	input.value = parseFloat(input.value).toFixed(2).replace(/\d(?=(\d{3})+$)/g, '$&,');
-}
-
 
 principalInput.addEventListener('input', (event) => {
 	let value = event.target.value;
@@ -48,7 +36,6 @@ principalInput.addEventListener('input', (event) => {
 		value = beforeDecimal + '.' + afterDecimal;
 	}
 
-	// Update the input field with the formatted value
 	event.target.value = value;
 });
 
@@ -56,10 +43,9 @@ principalInput.addEventListener('input', (event) => {
 principalInput.addEventListener('blur', (event) => {
 	let value = event.target.value.replace(',', '.'); // Handle comma as decimal point
 
-	// Convert to a float and format to 2 decimal places
+	// Convert to a float and format to 4 decimal places
 	value = parseFloat(value).toFixed(4);
 
-	// If input is invalid or empty, reset to "0.00"
 	if (isNaN(value)) {
 		value = '0.0000';
 	}
@@ -85,7 +71,6 @@ rateInput.addEventListener('input', (event) => {
 		value = beforeDecimal + '.' + afterDecimal;
 	}
 
-	// Update the input field with the formatted value
 	event.target.value = value;
 });
 
@@ -93,16 +78,12 @@ rateInput.addEventListener('input', (event) => {
 rateInput.addEventListener('blur', (event) => {
 	let value = event.target.value.replace(',', '.'); // Handle comma as decimal point
 
-	// Convert to a float and format to 2 decimal places
+	// Convert to a float and format to 3 decimal places
 	value = parseFloat(value).toFixed(3);
 
-	// If input is invalid or empty, reset to "0.00"
 	if (isNaN(value)) {
 		value = '0.000';
 	}
 
 	event.target.value = value;
 });
-
-//principalInput.addEventListener("input", (e) => formatCurrency(e.target));
-

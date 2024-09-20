@@ -4,26 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Compound Interest Calculator</title>
+  <title>Günlük Gelir Hesabı</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
-  <script src="cleave.min.js"></script>
+  <!-- <script src="cleave.min.js"></script> -->
 </head>
 <body>
   <section class="compound-interest-daily">
     <form id="calculate-interest">
       <label for="principal">Anapara:</label>
-        <!-- <input type="number" step="0.01" min="0" id="principal" placeholder="0.00"></input> -->
       <input type="text" inputmode="decimal" pattern="^\d+([.,]\d{1,4})?$" id="principal" title="Lütfen virgülden sonra en fazla dört ondalıklı geçerli bir sayı giriniz." required></input>
 
       <label for="rate">Oran (% günlük):</label>
-        <!-- <input type="number" step="0.01" id="rate" name="rate" required> -->
       <input type="text" inputmode="decimal" pattern="^\d+([.,]\d{1,4})?$" id="rate" name="rate" title="Lütfen virgülden sonra en fazla dört ondalıklı geçerli bir sayı giriniz." required></input>
 
       <label for="days">Gün sayısı:</label>
       <input type="number" id="days" name="days" required>
 
-      <button type="submit">Gelir hesapla</button>
+      <button type="submit">Hesapla</button>
       <div id="result"></div>
     </form>
   </section>
